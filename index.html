@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Квиз</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 1177603, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <!-- Mgid Sensor -->
+    <script type="text/javascript">
+      (function () {
+        var d = document,
+          w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+          cid: 584273,
+          lng: "us",
+          project: "a.mgid.com",
+        });
+        var l = "a.mgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now ? new Date().valueOf() : Date.now();
+        s.src = "https://" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+      })();
+    </script>
+    <!-- /Mgid Sensor -->
+
+    <!-- start -->
+    <div class="tab">
+      <section class="container" id="start">
+        <img alt="Дом" src="img/house.png" />
+        <img alt="Конфета" src="img/candy.png" />
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <img alt="Ветка" src="img/middle_branch.png" />
+        <img alt="Ветка" src="img/small_branch.png" />
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="text">
+          <h1>Не знаете, что подарить на Новый год?</h1>
+          <p>
+            Ответьте на 4 вопроса <br />
+            и узнайте идеальный подарок близкому. <br />
+            В конце теста ждет бонус - <a>скидка на подарок.</a>
+          </p>
+        </div>
+        <button
+          type="button"
+          class="button tablinks"
+          onclick="nextSlide(event, 'step_1')"
+        >
+          Подобрать подарок
+        </button>
+      </section>
+
+      <!--     -->
+      <!-- step 1 -->
+
+      <section class="container question tabcontent" id="step_1">
+        <h2>Кому предназначен подарок?</h2>
+        <div class="wrapper">
+          <div class="item">
+            <label for="step_1_1">
+              <div class="image_overlay">
+                <input id="step_1_1" type="checkbox" />
+                <img alt="Влюблённая пара" src="img/step_1_1.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Второй половинке</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="step_1_2">
+              <div class="image_overlay">
+                <input id="step_1_2" type="checkbox" />
+                <img alt="Пожилые люди" src="img/step_1_2.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Маме / папе</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="step_1_3">
+              <div class="image_overlay">
+                <input id="step_1_3" type="checkbox" />
+                <img alt="Семья" src="img/step_1_3.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Родным</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="step_1_4">
+              <div class="image_overlay">
+                <input id="step_1_4" type="checkbox" />
+                <img alt="Друзья" src="img/step_1_4.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Другу / подруге</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="step_1_5">
+              <div class="image_overlay">
+                <input id="step_1_5" type="checkbox" />
+                <img alt="Коллеги" src="img/step_1_5.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Коллегам / знакомым</p>
+            </label>
+          </div>
+        </div>
+        <div class="button_container">
+          <button
+            type="button"
+            class="button button_item tablinks back"
+            onclick="nextSlide(event, 'start')"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            disabled
+            class="button button_item tablinks next"
+            onclick="nextSlide(event, 'step_2');"
+          >
+            Далее
+          </button>
+        </div>
+      </section>
+
+      <!--       -->
+
+      <!-- step 2 -->
+      <section class="container question tabcontent" id="step_2">
+        <h2>Где живет получатель подарка?</h2>
+        <div class="wrapper">
+          <div class="item">
+            <label for="moskow">
+              <div class="image_overlay">
+                <input id="moskow" type="checkbox" />
+                <img alt="Красная площадь в Москве" src="img/step_2_1.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Москва и МО</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="spb">
+              <div class="image_overlay">
+                <input id="spb" type="checkbox" />
+                <img alt="Дворцовый мост в СПБ" src="img/step_2_2.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Санкт-Петербург и ЛО</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="another_city">
+              <div class="image_overlay">
+                <input id="another_city" type="checkbox" />
+                <img alt="Рисунок города" src="img/step_2_3.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Другой город</p>
+            </label>
+          </div>
+        </div>
+        <div class="button_container">
+          <button
+            type="button"
+            class="button button_item tablinks back"
+            onclick="nextSlide(event, 'step_1')"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            disabled
+            class="button button_item tablinks next"
+            onclick="nextSlide(event, 'step_3')"
+          >
+            Далее
+          </button>
+        </div>
+      </section>
+
+      <!--       -->
+
+      <!-- step 3 -->
+      <section class="container question tabcontent" id="step_3">
+        <h2>Какой отдых предпочитает?</h2>
+        <div class="wrapper">
+          <div class="item">
+            <label for="romantic">
+              <div class="image_overlay">
+                <input id="romantic" type="checkbox" />
+                <img
+                  alt="Фото человека, сидящего на природе у костра и палатки"
+                  src="img/step_3_1.png"
+                />
+                <div class="overlay"></div>
+              </div>
+              <p>Романтик, любит ночи под звездами и песни у костра</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="introvert">
+              <div class="image_overlay">
+                <input id="introvert" type="checkbox" />
+                <img
+                  alt="Человек, медитирующий на природе"
+                  src="img/step_3_2.png"
+                />
+                <div class="overlay"></div>
+              </div>
+              <p>Интроверт, любит побыть вдали от всех на природе и в тишине</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="with_children">
+              <div class="image_overlay">
+                <input id="with_children" type="checkbox" />
+                <img alt="Семья" src="img/step_3_3.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Не упускает возможности провести время с детьми</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="all_inclusive">
+              <div class="image_overlay">
+                <input id="all_inclusive" type="checkbox" />
+                <img alt="Фото роскошного обеда" src="img/step_3_4.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Ценит комфорт и когда "все включено"</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="spa">
+              <div class="image_overlay">
+                <input id="spa" type="checkbox" />
+                <img alt="Девушка на массаже" src="img/step_3_5.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Любит расслабленные спа-выходные</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="big_city">
+              <div class="image_overlay">
+                <input id="big_city" type="checkbox" />
+                <img alt="Большой город" src="img/step_3_6.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Обожает роскошные выходные в ритме большого города</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="russia">
+              <div class="image_overlay">
+                <input id="russia" type="checkbox" />
+                <img alt="Домик в России" src="img/step_3_7.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Не прочь путешествовать по России</p>
+            </label>
+          </div>
+        </div>
+        <div class="button_container">
+          <button
+            type="button"
+            class="button button_item tablinks back"
+            onclick="nextSlide(event, 'step_2')"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            disabled
+            class="button button_item tablinks next"
+            onclick="nextSlide(event, 'step_4')"
+          >
+            Далее
+          </button>
+        </div>
+      </section>
+
+      <!--       -->
+
+      <!-- step 4 -->
+      <section class="container question tabcontent" id="step_4">
+        <h2>Какой у вас бюджет на подарок?</h2>
+        <div class="wrapper">
+          <div class="item">
+            <label for="cheap">
+              <div class="image_overlay">
+                <input class="step_4" id="cheap" type="checkbox" />
+                <img alt="Изображение доллара" src="img/step_4.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>До 9 000 руб.</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="middle">
+              <div class="image_overlay">
+                <input class="step_4" id="middle" type="checkbox" />
+                <img alt="Изображение доллара" src="img/step_4.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>9 000 - 14 000 руб.</p>
+            </label>
+          </div>
+          <div class="item">
+            <label for="luxury">
+              <div class="image_overlay">
+                <input class="step_4" id="luxury" type="checkbox" />
+                <img alt="Изображение доллара" src="img/step_4.png" />
+                <div class="overlay"></div>
+              </div>
+              <p>Больше 14 000 руб.</p>
+            </label>
+          </div>
+        </div>
+        <div class="button_container">
+          <button
+            type="button"
+            class="button button_item tablinks back"
+            onclick="nextSlide(event, 'step_3')"
+          >
+            Назад
+          </button>
+          <button
+            type="button"
+            disabled
+            class="button button_item next"
+            id="results_button"
+            onclick="getResult()"
+          >
+            Далее
+          </button>
+        </div>
+      </section>
+
+      <!--       -->
+
+      <!-- result-1 -->
+      <section class="container result tabcontent" id="result_1">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Города России</h2>
+            <img
+              alt="Граффити на стене"
+              class="result_img"
+              src="img/___006.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в одном из 100+ отелей в центре
+              туристических городов России
+            </h3>
+            <p>
+              Вариант для любителей мест с историей и путешествий по стране.
+              Сертификат на двоих, включает отели в самых популярных городах
+              России: Нижнем Новгороде, Краснодаре, Калининграде и других.
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button1"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-3 -->
+      <section class="container result tabcontent" id="result_3">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Побег из города</h2>
+            <img
+              alt="Заснеженный домик в лесу"
+              class="result_img"
+              src="img/___004.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в любом из 260+ загородных отелей
+              высокого уровня для двоих.
+            </h3>
+            <p>
+              Главная особенность: отдых в тишине на природе, вдали от городской
+              суеты, но с городским комфортом. В отелях «Побега из города» гости
+              найдут успокаивающие загородные пейзажи и релакс-процедуры — в
+              большинстве комплексов есть спа-центры с бассейнами, саунами и
+              меню массажей.
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button2"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-4 -->
+      <section class="container result tabcontent" id="result_4">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Семейный</h2>
+            <img
+              alt="Радостная семья"
+              class="result_img"
+              src="img/___010.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в любом из 240+ загородных отелей
+              для двоих взрослых с детьми.
+            </h3>
+            <p>
+              Отели отлично подходят для отдыха всей семьёй, а в стоимость
+              входит проживание не только двоих взрослых, но и одного, двоих или
+              даже троих детей. В некоторых отелях включён завтрак, где-то
+              входят и обеды, а есть варианты, в которых трёхразовое питание с
+              алкогольными и безалкогольными напитками.
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button3"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-6 -->
+      <section class="container result tabcontent" id="result_6">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Все включено</h2>
+            <img
+              alt="Столовая в отеле"
+              class="result_img"
+              src="img/16134517.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в любом из 40+ загородных отелей
+              для двоих по системе «все включено».
+            </h3>
+            <p>
+              Возможность «нажать на паузу», вырваться из повседневной суеты и
+              побаловать себя — это про сертификат «Всё включено»! Он включает в
+              себя шведский стол, алкогольные, безалкогольные напитки и целую
+              палитру активностей: мастер-классы, прокат велосипедов, спа, шоу с
+              аниматорами — перечислять можно долго!
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button4"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-7 -->
+      <section class="container result tabcontent" id="result_7">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Две столицы 5*</h2>
+            <img
+              alt="Отель с видом на Красную Площадь"
+              class="result_img"
+              src="img/__32__004.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в любом из 16 пятизвездочных отелей
+              Москвы и Санкт-Петербурга для двоих. Доступ в спа-зону и завтраки
+              по выходным включены.
+            </h3>
+            <p>
+              Вариант для любителей мест с историей, интеллектуалов и просто
+              ценителей высококлассного сервиса. Городской уикенд или
+              романтический вечер в шикарном отеле в сердце Москвы или
+              Санкт-Петербурга — это всё может устроить себе получатель
+              сертификата «Две столицы 5*». Все отели с бассейнами, а в
+              стоимость входят завтраки по выходным и посещение спа-зоны
+              независимо от дня недели.
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button5"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-5 -->
+      <section class="container result tabcontent" id="result_5">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Отдых во SPAсение</h2>
+            <img alt="СПА-зона" class="result_img" src="img/___007.png" />
+            <h3>
+              Подарочный сертификат на отдых в любом из 130+ загородных отелей с
+              программой спа-процедур на двоих.
+            </h3>
+            <p>
+              Полное обновление, отдых душой и телом, наслаждение природой — это
+              всё про отели сертификата «Отдых во SPAсение». В каждый включены
+              завтраки, посещение общей спа-зоны и одна из велнес-процедур. Есть
+              варианты, в которых к этому всему добавляются ещё и обеды или даже
+              питание по системе «всё включено».
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button6"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+
+      <!-- result-2 -->
+      <section class="container result tabcontent" id="result_2">
+        <div class="overflow bottom_tree">
+          <img alt="Новогодняя ёлка" src="img/bottom_tree.png" />
+        </div>
+        <div class="overflow santa">
+          <img alt="Санта" src="img/santa.png" />
+        </div>
+        <div class="overflow middle_branch">
+          <img alt="Ветка" src="img/middle_branch.png" />
+        </div>
+        <div class="overflow small_branch">
+          <img alt="Ветка" src="img/small_branch.png" />
+        </div>
+        <div class="overflow top_right_branch">
+          <img alt="Ветка" src="img/top_right_branch.png" />
+        </div>
+        <div class="overflow gift">
+          <img alt="Коробка с подарком" src="img/gift.png" />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <h2>Необычные выходные</h2>
+            <img
+              alt="Влюбленная пара, сидящая у домика в форме полукруга"
+              class="result_img"
+              src="img/___003.png"
+            />
+            <h3>
+              Подарочный сертификат на отдых в любом из 80+ самых необычных
+              загородных отелей для двоих.
+            </h3>
+            <p>
+              В «Необычные выходные» не всегда включён завтрак, а условия в
+              отелях из его списка могут быть довольно походными — с удобствами
+              на улице или общими душевыми кабинами. Но эмоции, которые дарят
+              эти места, не получить ни в одной комфортабельной гостинице 5*.
+              Прозрачные купольные домики, замок, домики хоббитов и юрты
+              кочевников — всё это можно найти именно в этом сертификате.
+            </p>
+          </div>
+          <div class="result_button_container">
+            <p>
+              <span>Скидка 11%</span> по промокоду <span>MGID</span> только
+              сегодня
+            </p>
+            <a
+              id="details_button7"
+              href="https://cuva.ru/neobychnye-vyhodnye"
+              class="result_button"
+              >Узнать подробнее</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--     -->
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
